@@ -5,6 +5,9 @@ import {
 } from './screens';
 import { getGameStore, subscribe, type GameState } from './features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
 import { startGameRuntime, stopGameRuntime } from './game/game-runtime';
+import { actStartGame } from './features/surf-gameplay/act_start_game';
+import { actPauseGame } from './features/surf-gameplay/act_pause_game';
+import { actRestartGame } from './features/surf-gameplay/act_restart_game';
 
 function useGameSelector<T>(selector: (s: GameState) => T): T {
   const store = getGameStore();
@@ -88,7 +91,7 @@ export default function App() {
   }, []);
 
   const handleStartSequence = useCallback(() => {
-    storeRef.current.startGame();
+    actStartGame();
   }, []);
 
   const handleResumeLink = useCallback(() => {
@@ -182,6 +185,13 @@ export default function App() {
             className="px-6 py-3 bg-primary text-on-primary-fixed rounded font-bold"
           >
             Start Game
+          </button>
+          <button
+            data-action-id="restart-game"
+            onClick={actRestartGame}
+            className="mt-4 px-6 py-3 bg-secondary text-on-secondary-fixed rounded font-bold"
+          >
+            Restart Game
           </button>
           <button
             data-action-id="settings-3"
