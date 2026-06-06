@@ -142,8 +142,9 @@ export function useGameStore(): GameStore {
       let energy = current.energy;
       let score = current.score;
       let gameOver: boolean = current.gameOver;
-      let collided = false;
 
+      const remainingObstacles: Obstacle[] = [];
+      let collided = false;
       for (const obs of newObstacles) {
         if (
           obs.lane === current.playerLane &&
@@ -151,6 +152,8 @@ export function useGameStore(): GameStore {
           obs.position <= current.playerPosition + 5
         ) {
           collided = true;
+        } else {
+          remainingObstacles.push(obs);
         }
       }
 
@@ -162,6 +165,7 @@ export function useGameStore(): GameStore {
         }
       }
 
+      const remainingShards: Shard[] = [];
       for (const shard of newShards) {
         if (
           shard.lane === current.playerLane &&
@@ -170,6 +174,8 @@ export function useGameStore(): GameStore {
         ) {
           score += 10;
           energy = Math.min(MAX_ENERGY, energy + 10);
+        } else {
+          remainingShards.push(shard);
         }
       }
 
@@ -178,8 +184,8 @@ export function useGameStore(): GameStore {
 
       setState({
         tickCount: newTick,
-        obstacles: newObstacles,
-        shards: newShards,
+        obstacles: remainingObstacles,
+        shards: remainingShards,
         lives,
         energy,
         score,
