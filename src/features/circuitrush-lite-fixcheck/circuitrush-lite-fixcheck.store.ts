@@ -144,24 +144,19 @@ export function useGameStore(): GameStore {
       let gameOver: boolean = current.gameOver;
 
       const remainingObstacles: Obstacle[] = [];
-      let collided = false;
       for (const obs of newObstacles) {
         if (
           obs.lane === current.playerLane &&
           obs.position >= current.playerPosition - 5 &&
           obs.position <= current.playerPosition + 5
         ) {
-          collided = true;
+          lives -= 1;
+          energy = Math.max(0, energy - 20);
+          if (lives <= 0) {
+            gameOver = true;
+          }
         } else {
           remainingObstacles.push(obs);
-        }
-      }
-
-      if (collided) {
-        lives -= 1;
-        energy = Math.max(0, energy - 20);
-        if (lives <= 0) {
-          gameOver = true;
         }
       }
 
