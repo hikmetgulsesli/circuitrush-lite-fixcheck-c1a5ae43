@@ -1,0 +1,244 @@
+[
+  {
+    "screenId": "c3b79c70c3534748b2953c582e7f309c",
+    "screenTitle": "Gameplay - CircuitRush Lite FixCheck",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "START_SEQUENCE",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "RESUME_LINK",
+        "line": 206
+      },
+      {
+        "type": "button",
+        "label": "ABORT_RUN",
+        "line": 209
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "START_SEQUENCE",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "RESUME_LINK",
+        "line": 206
+      },
+      {
+        "type": "button",
+        "label": "ABORT_RUN",
+        "line": 209
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "ce6c07ac6db54a7c980bbab4714fde1a",
+    "screenTitle": "Game Settings - CircuitRush Lite FixCheck",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "PRIVACY_PROT",
+        "href": "#",
+        "line": 403
+      },
+      {
+        "type": "link",
+        "label": "SYS_REGS",
+        "href": "#",
+        "line": 404
+      },
+      {
+        "type": "button",
+        "label": "monitor_heart",
+        "line": 254
+      },
+      {
+        "type": "button",
+        "label": "bolt",
+        "line": 257
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 261
+      },
+      {
+        "type": "button",
+        "label": "Reset Preferences",
+        "line": 382
+      },
+      {
+        "type": "button",
+        "label": "Return to Game",
+        "line": 387
+      },
+      {
+        "type": "button",
+        "label": "Save &amp; Close",
+        "line": 390
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 296
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 298
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 300
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 308
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 310
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 312
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 330
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 338
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "PRIVACY_PROT",
+        "href": "#",
+        "line": 403
+      },
+      {
+        "type": "link",
+        "label": "SYS_REGS",
+        "href": "#",
+        "line": 404
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "monitor_heart",
+        "line": 254
+      },
+      {
+        "type": "button",
+        "label": "bolt",
+        "line": 257
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 261
+      },
+      {
+        "type": "button",
+        "label": "Reset Preferences",
+        "line": 382
+      },
+      {
+        "type": "button",
+        "label": "Return to Game",
+        "line": 387
+      },
+      {
+        "type": "button",
+        "label": "Save &amp; Close",
+        "line": 390
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 296
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 298
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 300
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 308
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 310
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 312
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 330
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 338
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 16,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
