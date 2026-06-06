@@ -1,0 +1,20 @@
+[
+  {
+    "screenId": "c3b79c70c3534748b2953c582e7f309c",
+    "name": "Gameplay - CircuitRush Lite FixCheck",
+    "type": "game",
+    "description": "Gameplay - CircuitRush Lite FixCheck screen",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "ce6c07ac6db54a7c980bbab4714fde1a",
+    "name": "Game Settings - CircuitRush Lite FixCheck",
+    "type": "settings",
+    "description": "Game Settings - CircuitRush Lite FixCheck screen",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]

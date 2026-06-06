@@ -1,0 +1,24 @@
+[
+  {
+    "screenId": "c3b79c70c3534748b2953c582e7f309c",
+    "title": "Gameplay - CircuitRush Lite FixCheck",
+    "htmlFile": "c3b79c70c3534748b2953c582e7f309c.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2I5ZTVkZjU4OTQxMTQ2MzdiNGRjN2MzODc0ZTFhMjBlEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM2MTM5NDU5OTI0MTU0OTQ1MjUw&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/circuitrush-lite-fixcheck-c1a5ae43/stitch/c3b79c70c3534748b2953c582e7f309c.html",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "ce6c07ac6db54a7c980bbab4714fde1a",
+    "title": "Game Settings - CircuitRush Lite FixCheck",
+    "htmlFile": "ce6c07ac6db54a7c980bbab4714fde1a.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2FiN2VhMGFhYjkzNjRlODI4YjgxNDRjMmI4YmVjOTdmEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhM2MTM5NDU5OTI0MTU0OTQ1MjUw&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/circuitrush-lite-fixcheck-c1a5ae43/stitch/ce6c07ac6db54a7c980bbab4714fde1a.html",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]
