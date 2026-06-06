@@ -1,0 +1,92 @@
+[
+  {
+    "screenId": "c3b79c70c3534748b2953c582e7f309c",
+    "title": "Gameplay - CircuitRush Lite FixCheck",
+    "componentName": "GameplayCircuitrushLiteFixcheck",
+    "file": "src/screens/GameplayCircuitrushLiteFixcheck.tsx",
+    "buttons": 3,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "start-sequence-1",
+        "kind": "button",
+        "label": "START_SEQUENCE",
+        "index": 0
+      },
+      {
+        "id": "resume-link-2",
+        "kind": "button",
+        "label": "RESUME_LINK",
+        "index": 1
+      },
+      {
+        "id": "abort-run-3",
+        "kind": "button",
+        "label": "ABORT_RUN",
+        "index": 2
+      }
+    ]
+  },
+  {
+    "screenId": "ce6c07ac6db54a7c980bbab4714fde1a",
+    "title": "Game Settings - CircuitRush Lite FixCheck",
+    "componentName": "GameSettingsCircuitrushLiteFixcheck",
+    "file": "src/screens/GameSettingsCircuitrushLiteFixcheck.tsx",
+    "buttons": 6,
+    "inputs": 8,
+    "links": 2,
+    "actions": [
+      {
+        "id": "monitor-heart-1",
+        "kind": "button",
+        "label": "Monitor Heart",
+        "index": 0
+      },
+      {
+        "id": "bolt-2",
+        "kind": "button",
+        "label": "Bolt",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "button",
+        "label": "Settings",
+        "index": 2
+      },
+      {
+        "id": "reset-preferences-4",
+        "kind": "button",
+        "label": "Reset Preferences",
+        "index": 3
+      },
+      {
+        "id": "return-to-game-5",
+        "kind": "button",
+        "label": "Return to Game",
+        "index": 4
+      },
+      {
+        "id": "save-and-close-6",
+        "kind": "button",
+        "label": "Save and Close",
+        "index": 5
+      },
+      {
+        "id": "privacy-prot-1",
+        "kind": "link",
+        "label": "PRIVACY_PROT",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "sys-regs-2",
+        "kind": "link",
+        "label": "SYS_REGS",
+        "href": "#",
+        "index": 1
+      }
+    ]
+  }
+]
