@@ -1,19 +1,19 @@
-import { getGameState, subscribe, useGameStore, dispatchTick } from '../features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
+import { getGameState, subscribe, getGameStore, dispatchTick } from '../features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
 
 export const testBridge = {
   getState: getGameState,
   subscribe,
   tick: dispatchTick,
   actions: {
-    startGame: () => useGameStore().startGame(),
-    pauseGame: () => useGameStore().pauseGame(),
-    resumeGame: () => useGameStore().resumeGame(),
-    abortGame: () => useGameStore().abortGame(),
-    openSettings: () => useGameStore().openSettings(),
-    closeSettings: () => useGameStore().closeSettings(),
-    moveLeft: () => useGameStore().moveLeft(),
-    moveRight: () => useGameStore().moveRight(),
-    resetGame: () => useGameStore().resetGame(),
-    saveSettings: () => useGameStore().saveSettings(),
+    startGame: () => getGameStore().startGame(),
+    pauseGame: () => getGameStore().pauseGame(),
+    resumeGame: () => getGameStore().resumeGame(),
+    abortGame: () => getGameStore().abortGame(),
+    openSettings: () => getGameStore().openSettings(),
+    closeSettings: () => getGameStore().closeSettings(),
+    moveLeft: () => getGameStore().moveLeft(),
+    moveRight: () => getGameStore().moveRight(),
+    resetGame: () => getGameStore().resetGame(),
+    saveSettings: () => getGameStore().saveSettings(),
   },
 };

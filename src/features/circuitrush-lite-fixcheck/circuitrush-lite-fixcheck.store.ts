@@ -82,7 +82,7 @@ function getState(): GameState {
   return state;
 }
 
-export function useGameStore(): GameStore {
+export function getGameStore(): GameStore {
   // For React compatibility: return current state + actions
   return {
     ...state,
@@ -144,20 +144,26 @@ export function useGameStore(): GameStore {
       let gameOver: boolean = current.gameOver;
 
       const remainingObstacles: Obstacle[] = [];
+      let collided = false;
       for (const obs of newObstacles) {
         if (
           obs.lane === current.playerLane &&
           obs.position >= current.playerPosition - 5 &&
           obs.position <= current.playerPosition + 5
         ) {
-          lives -= 1;
-          energy = Math.max(0, energy - 20);
-          if (lives <= 0) {
-            gameOver = true;
-          }
+          collided = true;
         } else {
           remainingObstacles.push(obs);
         }
+      }
+
+      if (collided) {
+        lives -= 1;
+        energy = Math.max(0, energy - 20);
+        if (lives <= 0) {
+          gameOver = true;
+        }
+        newObstacles = remainingObstacles;
       }
 
       const remainingShards: Shard[] = [];
@@ -173,6 +179,7 @@ export function useGameStore(): GameStore {
           remainingShards.push(shard);
         }
       }
+      newShards = remainingShards;
 
       // Passive score increase
       score += 1;
@@ -203,6 +210,6 @@ export function getGameState(): GameState {
 }
 
 export function dispatchTick() {
-  const store = useGameStore();
+  const store = getGameStore();
   store.tick();
 }

@@ -3,22 +3,24 @@ import {
   GameplayCircuitrushLiteFixcheck,
   GameSettingsCircuitrushLiteFixcheck,
 } from './screens';
-import { useGameStore, subscribe, type GameState } from './features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
+import { getGameStore, subscribe, type GameState } from './features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
 import { startGameRuntime, stopGameRuntime } from './game/game-runtime';
 
 function useGameSelector<T>(selector: (s: GameState) => T): T {
-  const store = useGameStore();
+  const store = getGameStore();
   const [value, setValue] = useState(() => selector(store as unknown as GameState));
+  const selectorRef = useRef(selector);
+  selectorRef.current = selector;
 
   useEffect(() => {
     const update = () => {
-      const s = useGameStore() as unknown as GameState;
-      setValue(selector(s));
+      const s = getGameStore() as unknown as GameState;
+      setValue(selectorRef.current(s));
     };
     update();
     const unsub = subscribe(update);
     return () => { unsub(); };
-  }, [selector]);
+  }, []);
 
   return value;
 }
@@ -37,8 +39,8 @@ export default function App() {
   const speed = useGameSelector((s) => s.speed);
   const tickCount = useGameSelector((s) => s.tickCount);
 
-  const storeRef = useRef(useGameStore());
-  storeRef.current = useGameStore();
+  const storeRef = useRef(getGameStore());
+  storeRef.current = getGameStore();
 
   useEffect(() => {
     startGameRuntime();
@@ -48,7 +50,7 @@ export default function App() {
   useEffect(() => {
     const app = {
       get state() {
-        const s = useGameStore() as unknown as GameState;
+        const s = getGameStore() as unknown as GameState;
         return {
           screen: s.screen,
           playerLane: s.playerLane,

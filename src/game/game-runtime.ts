@@ -1,4 +1,4 @@
-import { useGameStore, subscribe, type GameStore } from '../features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
+import { getGameStore, subscribe, type GameStore } from '../features/circuitrush-lite-fixcheck/circuitrush-lite-fixcheck.store';
 
 let runtimeHandle: number | null = null;
 let isRunning = false;
@@ -7,12 +7,19 @@ export function startGameRuntime() {
   if (isRunning) return;
   isRunning = true;
 
-  const tick = () => {
-    const store = useGameStore();
-    store.tick();
-    if (isRunning) {
-      runtimeHandle = requestAnimationFrame(tick);
+  let lastTime = performance.now();
+  const interval = 1000 / 60; // 60 FPS target
+
+  const tick = (now: number) => {
+    if (!isRunning) return;
+
+    const elapsed = now - lastTime;
+    if (elapsed >= interval) {
+      lastTime = now - (elapsed % interval);
+      const store = getGameStore();
+      store.tick();
     }
+    runtimeHandle = requestAnimationFrame(tick);
   };
 
   runtimeHandle = requestAnimationFrame(tick);
@@ -31,7 +38,7 @@ export function isGameRuntimeRunning() {
 }
 
 export function getRuntimeState() {
-  const store = useGameStore();
+  const store = getGameStore();
   return {
     state: {
       screen: store.screen,
